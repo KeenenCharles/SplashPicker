@@ -33,3 +33,30 @@ dependencies {
 
     implementation 'com.kc.androidunsplash:androidunsplash:0.2.1'
 }
+
+ext {
+    bintrayRepo = 'splashpicker'
+    bintrayName = 'splashpicker'
+
+    publishedGroupId = 'com.kc.splashpicker'
+    libraryName = 'splashpicker'
+    artifact = 'splashpicker'
+
+    libraryDescription = 'An image picker that shows images from Unsplash'
+
+    siteUrl = 'https://github.com/KeenenCharles/SplashPicker'
+    gitUrl = 'https://github.com/KeenenCharles/SplashPicker.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'keenencharles'
+    developerName = 'Keenen Charles'
+    developerEmail = 'keenencharles@gmail.com'
+
+    licenseName = 'MIT License'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["MIT"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
