@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:elevation="3dp"
+                android:translationZ="3dp"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:theme="?attr/actionBarTheme"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/searchBox"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@android:color/black"
+            android:elevation="3dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:hint="@string/search_hint"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/gray" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_close"
+                android:onClick="hideSearchBar"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:spanCount="2"
+                tools:listitem="@layout/item_photo" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:elevation="2dp"
+                android:background="@android:color/transparent"
+                style="?android:attr/progressBarStyleHorizontal" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</layout>

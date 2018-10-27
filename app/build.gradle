@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    dataBinding {
+        enabled = true
+    }
+    defaultConfig {
+        applicationId "com.kc.splashpickerdemo"
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            buildConfigField 'String', "Unsplash", Unsplash_ClientID
+            resValue 'string', "unsplash", Unsplash_ClientID
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', "Unsplash", Unsplash_ClientID
+            resValue 'string', "unsplash", Unsplash_ClientID
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.kc.androidunsplash:androidunsplash:0.2.1'
+    implementation project(path: ':splashpicker')
+}
