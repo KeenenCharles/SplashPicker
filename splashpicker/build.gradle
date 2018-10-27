@@ -35,8 +35,8 @@ dependencies {
 }
 
 ext {
-    bintrayRepo = 'splashpicker'
-    bintrayName = 'splashpicker'
+    bintrayRepo = 'SplashPicker'
+    bintrayName = 'SplashPicker'
 
     publishedGroupId = 'com.kc.splashpicker'
     libraryName = 'splashpicker'

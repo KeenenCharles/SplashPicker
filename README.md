@@ -25,7 +25,8 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable Inten
 Add the line below to your build.gradle to use:
 ~~~
 dependencies {
-    compile 'com.kc.splashpicker:splashpicker:1.0.0'
+    implementation 'com.kc.splashpicker:splashpicker:1.0.0'
+    implementation 'com.kc.androidunsplash:androidunsplash:0.2.1'
 }
 ~~~
 
