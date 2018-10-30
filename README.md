@@ -1,6 +1,8 @@
 # SplashPicker
 An image picker that loads images from Unsplash
 
+![SplashPicker Demo](https://storage.googleapis.com/hotlinks-f6004.appspot.com/splashpicker.gif)
+
 ## Usage
 
 ### Open Image Picker
