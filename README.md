@@ -1,7 +1,7 @@
 # SplashPicker
-An image picker that loads images from Unsplash
+An image picker that displays images from Unsplash and lets the user select an image and it's returned to your app.
 
-![SplashPicker Demo](https://storage.googleapis.com/hotlinks-f6004.appspot.com/splashpicker.gif)
+<img src="https://storage.googleapis.com/hotlinks-f6004.appspot.com/splashpicker.gif" width="300" height="533" />
 
 ## Usage
 
