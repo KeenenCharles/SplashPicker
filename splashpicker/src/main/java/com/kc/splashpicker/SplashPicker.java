@@ -12,10 +12,23 @@ public class SplashPicker {
         open(activity, clientID, null);
     }
 
+    public static void open(Fragment fragment, Activity activity, String clientID){
+        open(fragment, activity, clientID, null);
+    }
+
     public static void open(Activity activity, String clientID, String title){
+        Intent intent = getIntent(activity, clientID, title);
+        activity.startActivityForResult(intent, PICK_IMAGE_REQUEST);
+    }
+    public static void open(Fragment fragment, Activity activity, String clientID, String title){
+        Intent intent = getIntent(activity, clientID, title);
+        fragment.startActivityForResult(intent, PICK_IMAGE_REQUEST);
+    }
+
+    private static Intent getIntent(Activity activity, String clientID, String title) {
         Intent intent = new Intent(activity, PickerActivity.class);
         intent.putExtra("CLIENT_ID", clientID);
         intent.putExtra("TITLE", title == null ? "Select Image" : title);
-        activity.startActivityForResult(intent, PICK_IMAGE_REQUEST);
+        return intent;
     }
 }
