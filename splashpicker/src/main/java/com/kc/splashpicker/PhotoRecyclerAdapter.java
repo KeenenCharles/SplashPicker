@@ -42,7 +42,7 @@ public class PhotoRecyclerAdapter extends RecyclerView.Adapter<PhotoRecyclerAdap
             }
         });
 
-        Picasso.with(mContext)
+        Picasso.get()
                 .load(photo.getUrls().getRegular())
                 .resize(300, 300)
                 .centerCrop()
