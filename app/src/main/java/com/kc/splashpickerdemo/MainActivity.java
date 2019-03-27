@@ -15,7 +15,7 @@ import androidx.databinding.DataBindingUtil;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final String CLIENT_ID = BuildConfig.Unsplash;
+    private final String CLIENT_ID = "";//BuildConfig.Unsplash;
 
     private ActivityMainBinding mBinding;
 
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayPhoto(Photo photo) {
-        Picasso.with(this)
+        Picasso.get()
                 .load(photo.getUrls().getRegular())
                 .resize(300, 300)
                 .centerCrop()

@@ -3,6 +3,8 @@ package com.kc.splashpicker;
 import android.app.Activity;
 import android.content.Intent;
 
+import androidx.fragment.app.Fragment;
+
 public class SplashPicker {
 
     public static final int PICK_IMAGE_REQUEST = 0x4;
